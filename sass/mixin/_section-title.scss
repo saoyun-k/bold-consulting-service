@@ -1,0 +1,27 @@
+@forward "../config/variables";
+@use "../config/variables" as var;
+@forward  "../function/convert-vp";
+@use "../function/convert-vp" as vp;
+@forward "../mixin/madia";
+@use "../mixin/madia";
+
+@mixin content-title {
+  .content__title {
+    letter-spacing: .04em;
+    font-size: 6.0rem;
+    font-family: "Montserrat";
+    color: var.$colorYellow;
+    @include madia.deviceBreakPointMax(600px) {
+       font-size: 5.1rem;
+      }
+  }
+  .content__title-sub {
+    margin-top: vp.convertVw(14px, 1280px);
+    letter-spacing: .12em;
+    font-size: 2.1rem;
+    color: var.$colorBaseBlack;
+    @include madia.deviceBreakPointMax(600px) {
+       font-size: 2.6rem;
+    }
+  }
+}

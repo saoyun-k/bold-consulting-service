@@ -1,0 +1,90 @@
+@forward "../config/variables";
+@use "../config/variables" as var;
+@forward  "../function/convert-vp";
+@use "../function/convert-vp" as vp;
+@forward "../mixin/madia";
+@use "../mixin/madia";
+@forward "../mixin/section-title";
+@use "../mixin/section-title" as st;
+@forward "../mixin/side-nav";
+@use "../mixin/side-nav" as sn;
+@forward  "../mixin/site-padding";
+@use "../mixin/site-padding" as sp;
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: vp.convertVh(612px, 1280px);
+  color: var.$colorWhite;
+  background-color: var.$colorBaseBlack;
+  @include sn.side-nav;
+  font-family: var.$font-din;
+  .arrow {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    font-size: 1.6rem;
+    transform: translate(vp.convertVw(105px, 1280px), vp.convertVw(105px, 1280px)) rotate(-90deg);
+    cursor: pointer;
+    @include madia.deviceBreakPointMax(600px) {
+      transform: translate(vp.convertVw(16px, 600px), vp.convertVw(105px, 600px))  rotate(-90deg);
+      font-size: 1.2rem;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 80px;
+      background-color: var.$colorWhite;
+      transform: translate(-62px, -34px) rotate(-90deg);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
+      border-top: 7px solid var.$colorWhite;
+      transform: translate(-22px, 3px) rotate(-90deg);
+    }
+    &__page-top {
+      display: block;
+      line-height: 16px;
+    }
+  }
+  .footer__content {
+    .fo-copy {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-size: 1.8rem;
+      transform: translate(vp.convertVw(-50px, 1280px), vp.convertVw(-10px, 1280px));
+    }
+    .copyright__pc {
+      &.fo-copy {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-size: 1.8rem;
+        transform: translate(vp.convertVw(-50px, 1280px), vp.convertVw(-10px, 1280px));
+        @include madia.deviceBreakPointMax(600px) {
+          display: none;
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .copyright__sp {
+      display: none;
+      @include madia.deviceBreakPointMax(600px) {
+        display: block;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

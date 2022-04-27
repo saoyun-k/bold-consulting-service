@@ -1,0 +1,28 @@
+@forward "../config/variables";
+@use "../config/variables" as var;
+@forward  "../function/convert-vp";
+@use "../function/convert-vp" as vp;
+@forward "../mixin/madia";
+@use "../mixin/madia";
+
+@mixin side-nav {
+  .side-navigation {
+    display: inline-block;
+    letter-spacing: .14em;
+    font-size: 1.6rem;
+    font-family: "Montserrat";
+    color: var.$colorBaseBlack;
+    transform: rotate(-90deg);
+    @include madia.deviceBreakPointMax(600px) {
+      display: none;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: vp.convertVw(60px, 1280px);
+      background-color: var.$colorBaseBlack;
+      transform: translate(vp.convertVw(-45px, 1280px), vp.convertVw(-23px, 1280px)) rotate(-90deg);
+    }
+  }
+}

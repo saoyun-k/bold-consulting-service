@@ -1,0 +1,97 @@
+@forward "../config/variables";
+@use "../config/variables" as var;
+@forward  "../function/convert-vp";
+@use "../function/convert-vp" as vp;
+@forward "../mixin/madia";
+@use "../mixin/madia";
+@forward "../mixin/section-title";
+@use "../mixin/section-title" as st;
+@forward "../mixin/side-nav";
+@use "../mixin/side-nav" as sn;
+@forward  "../mixin/site-padding";
+@use "../mixin/site-padding" as sp;
+
+
+.contact {
+  @include sp.sitePaddingBase(173px, 0px, 112px, 0px);
+  background-color: var.$colorBlue;
+  @include madia.deviceBreakPointMax(600px) {
+    @include sp.sitePaddingSp(94px, 0px, 102px, 0px);
+  }
+  .contact__container {
+    max-width: vp.convertVw(1000px, 1280px);
+    margin: 0 auto;
+    @include madia.deviceBreakPointMax(600px) {
+      max-width: vp.convertVw(520px, 600px);
+    }
+    .contact__content.c-title {
+      @include st.content-title;
+      .content__title-sub {
+        color: var.$colorYellow;
+      }
+    }
+  }
+}
+
+.contact__form {
+  margin-top: vp.convertVw(61px, 1000px);
+  @include madia.deviceBreakPointMax(600px) {
+    margin-top: vp.convertVw(64px, 1000px);
+  }
+  .contact__form__item {
+    .contact__form__item-inner__column {
+      &.c-common {
+        @include sp.sitePaddingBase(20px, 20px, 20px, 20px);
+        letter-spacing: .12em;
+        font-family: "Neue Haas Unica W1G";
+        font-weight: bold;
+        font-size: 1.8rem;
+        color: var.$colorGray;
+        @include madia.deviceBreakPointMax(600px) {
+          @include sp.sitePaddingBase(29px, 29px, 29px, 29px);
+          font-size: 2.6rem;
+        }
+      }
+      &.c-input {
+        width: vp.convertPercent(670px, 1000px);
+        @include madia.deviceBreakPointMax(600px) {
+          width: 100%;
+        }
+      }
+      &.c-textarea {
+        width: 100%;
+        height: vp.convertVh(495px, 1280px);
+      }
+    }
+    .contact__form__item-button {
+      width: 100%;
+      letter-spacing: 1em;
+      line-height: 4em;
+      border-radius: 100vw;
+      font-size: 2.4rem;
+      font-family: var.$font-din;
+      background-color: #FECF07;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1, 1.1);
+        filter: brightness(110%);
+      }
+      @include madia.deviceBreakPointMax(600px) {
+        line-height: 2.6em;
+        font-size: 3.4rem;
+      }
+    }
+  }
+  .contact__form__item:not(:first-child) {
+    margin-top: vp.convertVw(15px, 1280px);
+    @include madia.deviceBreakPointMax(600px) {
+      margin-top: vp.convertVw(24px, 600px);
+    }
+  }
+  .contact__form__item:nth-last-of-type(1) {
+    margin-top: vp.convertVw(40px, 1280px);
+    @include madia.deviceBreakPointMax(600px) {
+      margin-top: vp.convertVw(32px, 600px);
+    }
+  }
+}

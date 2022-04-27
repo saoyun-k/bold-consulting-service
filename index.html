@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>boldConsultingService</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="コスメのセレクトショップです">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.1.0/css/drawer.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.1.0/js/drawer.min.js"></script>
+  <script type="text/javascript" src="js/script.js" defer></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="first-view">
+      <div class="first-view__container">
+        <div class="arrow"></div>
+        <div class="header-wrapper">
+          <div class="drawer drawer--right">
+            <header class="header" role="banner">
+              <div class="header__content">
+                <h1 class="header__content-title">Bold Consulting Service</h1>
+              </div>
+              <button type="button" class="drawer-toggle drawer-hamburger">
+                <span class="sr-only">MENU</span>
+                <span class="drawer-hamburger-icon"></span>
+              </button>
+              <nav class="drawer-nav" role="navigation">
+                <ul class="drawer-menu">
+                  <li><a class="drawer-menu-item" href="#">ABOUT</a></li>
+                  <li><a class="drawer-menu-item" href="#">SERVICE</a></li>
+                  <li><a class="drawer-menu-item" href="#">FLOW</a></li>
+                  <li><a class="drawer-menu-item" href="#">MEMBERS</a></li>
+                  <li><a class="drawer-menu-item" href="#">FAQ</a></li>
+                  <li><a class="drawer-menu-item" href="#">CONTACT</a></li>
+                  <li><a class="drawer-menu-item" href="#">COMPANY</a></li>
+                </ul>
+              </nav>
+            </header>
+          </div>
+          <div class="first-view__contents">
+            <div class="first-view__content f-main">
+              <h2 class="first-view__content__title"><span class="first-view__content__title-inner">大胆に<br>ゴールまで</span><span class="first-view__content__title-inner"><br>たどり着きます</span></h2>
+              <div class="first-view__content f-img">
+                <img src="images/design.png" srcset="images/design@2x.png 2x" alt="design consulting">
+              </div>
+            </div>
+            <div class="first-view__content f-side">
+              <small class="copyright__pc">©my portfolio</small>
+              <small class="copyright__sp">©creators village</small>
+            </div>
+            <div class="first-view__content f-memu">
+              <a href="" class="f-btn"><span class="f-consultation">相談してみる</span><span class="f-mail"><img src="images/email.svg" alt="email"></span></a>
+            </div>
+            <div class="first-view__content f-first">
+              <img class="f-rellax" src="images/firstView.png" srcset="images/firstView@2x.png 2x" alt="firstView">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <section class="point">
+        <div class="swiper slider1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Go Bold</div>
+            <div class="swiper-slide">Go Bold</div>
+          </div>
+        </div>
+        <div class="swiper slider2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Go Bold</div>
+            <div class="swiper-slide">Go Bold</div>
+          </div>
+        </div>
+        <div class="point__container">
+          <div class="point__content top">
+            <h2 class="content__title">POINT</h2>
+            <p class="content__title-sub">選ばれる3つのポイント</p>
+          </div>
+          <ul class="point__contents">
+            <li class="point__content">
+              <figure class="point__content__icon">
+                <div class="point__content__icon-pt1">
+                  <img src="images/pointIcon1.svg" alt="pointIcon1">
+                </div>
+                <figcaption class="point__content__text">WEBクリエイティブを<br>丸投げ可能</figcaption>
+              </figure>
+            </li>
+            <li class="point__content">
+              <figure class="point__content__icon">
+                <div class="point__content__icon-pt2">
+                  <img src="images/pointIcon2.svg" alt="pointIcon2">
+                </div>
+                <figcaption class="point__content__text">各WEB領域のプロが所属する<br>クリエイタータレント事務所</figcaption>
+              </figure>
+            </li>
+            <li class="point__content">
+              <figure class="point__content__icon">
+                <div class="point__content__icon-pt3">
+                  <img src="images/pointIcon3.svg" alt="pointIcon3">
+                </div>
+                <figcaption class="point__content__text">集客・売上最大化を見据えた<br>WEBコンサルティング</figcaption>
+              </figure>
+            </li>
+          </ul>
+          <div class="point__content p-photo">
+            <picture>
+              <source srcset="images/point2.png 1x ,images/point2@2x.png 2x" media="(max-width:600px)">
+              <img src="images/point.png" srcset="images/point@2x.png 2x" alt="point">
+            </picture>
+          </div>
+        </div>
+        <div class="point__container-white">
+          <div class="side-navigation">
+            <span class="side-navigation__text">WHAT WE ARE</span>
+          </div>
+          <div class="point__content p-text">
+            <p class="point__content__text">私たちは、新しいベンチャーやサービスが国内だけに限らず、世界にも普及する手助けをします。プロとして時には、大切な仲間として、<span class="highlighter">一緒に事を成し遂げるために伴走します。</span></p>
+          </div>
+        </div>
+      </section>
+      <section class="service">
+        <div class="service__container">
+          <div class="service__content s-title">
+            <h2 class="content__title">SERVICE</h2>
+          </div>
+          <div class="service__contents s-top">
+            <div class="service__content s-photo">
+              <img src="images/service1.png" srcset="images/service@2x.png 2x" alt="service1">
+            </div>
+            <div class="service__content s-text">
+              <p class="service__content__text">プロフェッショナル達が<br>貴社のビジネスをサポート</p>
+              <p class="service__content__text">国内外のテック系ベンチャー企業を中心に、グルーバルへの進出、日本市場開拓に向けたプロダクトやサービスの立ち上げ、セールス、マーケティングの支援を行います。共に戦略を立て、サービスや事業、会社の成長に寄与します。</p>
+            </div>
+          </div>
+          <div class="service__container__wapper">
+            <div class="service__container__wapper-inner s-items1">
+              <div class="service__contents s-item1">
+                <div class="service__content s-logo">
+                  <h3 class="service__content__title">WEB集客</h3>
+                  <div class="service__content__icon">
+                    <img src="images/serviceIcon1.svg" alt="serviceIcon1">
+                  </div>
+                </div>
+                <div class="service__content s-list">
+                  <ul class="service__content__lists">
+                    <li class="service__content__lists-list">googleリスティング広告</li>
+                    <li class="service__content__lists-list">ディスプレイ広告</li>
+                    <li class="service__content__lists-list">Facebook/Instagram広告</li>
+                    <li class="service__content__lists-list">Twitter広告</li>
+                    <li class="service__content__lists-list">YOUTUBE広告/LINE広告</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="service__contents s-item2">
+                <div class="service__content s-logo">
+                  <h3 class="service__content__title">WEBサイト制作</h3>
+                  <div class="service__content__icon">
+                    <img src="images/serviceIcon2.svg" alt="serviceIcon2">
+                  </div>
+                </div>
+                <div class="service__content s-list">
+                  <ul class="service__content__lists">
+                    <li class="service__content__lists-list">販促用LP</li>
+                    <li class="service__content__lists-list">コーポレートサイト</li>
+                    <li class="service__content__lists-list">採用サイト</li>
+                    <li class="service__content__lists-list">ECサイト等</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="service__container__wapper-inner s-items2">
+              <div class="service__contents s-item3">
+                <div class="service__content s-logo">
+                  <h3 class="service__content__title">動画制作</h3>
+                  <div class="service__content__icon">
+                    <img src="images/serviceIcon3.svg" alt="serviceIcon3">
+                  </div>
+                </div>
+                <div class="service__content s-list">
+                  <ul class="service__content__lists">
+                    <li class="service__content__lists-list">動画広告制作</li>
+                    <li class="service__content__lists-list">社内研修動画制作</li>
+                    <li class="service__content__lists-list">番組制作等（撮影 / 編集）</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="service__contents s-item4">
+                <div class="service__content s-logo">
+                  <h3 class="service__content__title">WEBサービス開発</h3>
+                  <div class="service__content__icon">
+                    <img src="images/serviceIcon4.svg" alt="serviceIcon4">
+                  </div>
+                </div>
+                <div class="service__content s-list">
+                  <ul class="service__content__lists">
+                    <li class="service__content__lists-list">マッチングサービス</li>
+                    <li class="service__content__lists-list">口コミサービス</li>
+                    <li class="service__content__lists-list">サブスクリプション型サービス等</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="service__contents s-bottom">
+            <div class="service__content s-photo3">
+              <img src="images/service2.png" srcset="images/service2@2x.png 2x" alt="service2">
+            </div>
+            <div class="service__content s-number">
+              <p class="service__content__text">122%</p>
+            </div>
+          </div>
+          <div class="service__content s-text s-botom">
+            <p class="service__content__text">平均で一年後に<br>およそ売上は122%に。</p>
+            <p class="service__content__text">数多くのテック系ベンチャー企業のサポート経験がある元VC、ベンチャー経営者が、貴社の進化をサポート。<br>私たちのコンサルを受けたお客様の売上は初年度平均22%のUPしております。</p>
+          </div>
+        </div>
+      </section>
+      <section class="flow">
+        <div class="flow__container">
+          <div class="flow__contents">
+            <div class="flow__content__items f-title">
+              <div class="flow__content__items-item f-title">
+                <h2 class="content__title">FLOW</h2>
+                <p class="content__title-sub">問い合わせ後の流れについて</p>
+              </div>
+              <div class="flow__content__items-item f-box"></div>
+            </div>
+            <div class="flow__content f-side">
+              <div class="side-navigation">
+                <span class="side-navigation__text">FLOW</span>
+              </div>
+            </div>
+            <ol class="flow__content__items f-items">
+              <li class="flow__content__items-item1"><span class="step">面談</span></li>
+              <li class="flow__content__items-item2"><span class="step">提案 + <br>お見積り</span></li>
+              <li class="flow__content__items-item3"><span class="step">施策実施<span class="step-font">ex) 広告運用など</span></span></li>
+              <li class="flow__content__items-item4"><span class="step">売上向上</span></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <div class="member">
+        <div class="member__container">
+          <div class="member__content m-title">
+            <h2 class="content__title">MEMBER</h2>
+            <p class="content__title-sub m-css">ボードメンバー</p>
+          </div>
+          <article class="member__contents">
+            <div class="member__content m-photo">
+              <img src="images/member.png" srcset="images/member@2x.png 2x" alt="member">
+            </div>
+            <dl class="member__content m-text">
+              <dt class="member__content__items"><span class="member__content__items-item">代表取締役社長</span>坂本竜馬（さかもとりょうま）</dt>
+              <dd class="member__content__text">龍馬は天保6年11月15日（1836年1月3日）[注 2]、土佐国土佐郡上街本町一丁目（現・高知県高知市上町一丁目）の土佐藩郷士（下級武士・足軽）坂本家に父・八平、母・幸の間の二男として生まれた。兄（権平）と3人の姉（千鶴、栄、乙女）がいた。坂本家は質屋、酒造業、呉服商を営む豪商才谷屋の分家で、第六代・直益のときに長男・直海が藩から郷士御用人に召し出されて坂本家を興した[1]。 土佐藩の武士階級には上士と下士があり、商家出身の坂本家は下士（郷士）だったが（坂本家は福岡家に仕えていたという）、分家の際に才谷屋から多額の財産を分与されており、非常に裕福な家庭だった[2][3]。<br><br>龍馬が生まれる前の晩に、母親が龍が天を飛ぶ瑞夢を見て[4]（または父が駿馬の母が蛟龍の夢を見たとも[5]）、それにちなんで龍馬と名づけられ、幼い龍馬の背には一塊の怪毛があった[6]という伝説がある。</dd>
+            </dl>
+          </article>
+          <div class="member__content m-side">
+            <div class="side-navigation m-side">
+              <span class="side-navigation__text">CREATORS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="question">
+        <div class="question__container">
+          <div class="question__contents">
+            <div class="question__content q-title">
+              <h2 class="content__title">FAQ</h2>
+              <p class="content__title-sub">よくあるご質問はこちら</p>
+            </div>
+            <div class="question__content q-items">
+              <dl class="question__content__items">
+                <div class="question__content__items q-line">
+                  <dt class="question__content__items-text q-ques">相談料はかかりますか？<span class="q-icon"></span></dt>
+                  <dd class="question__content__items-text q-ans">相談料は頂いておりませんので、お気軽にご相談ください<span class="q-icon-m"></span></dd>
+                </div>
+                <div class="question__content__items q-line">
+                  <dt class="question__content__items-text q-ques">費用はどれくらいになりますか？<span class="q-icon"></span></dt>
+                  <dd class="question__content__items-text q-ans">答えだよ<span class="q-icon-m"></span></dd>
+                </div>
+                <div class="question__content__items q-line">
+                  <dt class="question__content__items-text q-ques">予算に合わせてご提案いただくことは可能でしょうか？<span class="q-icon"></span></dt>
+                  <dd class="question__content__items-text q-ans">答えだよ<span class="q-icon-m"></span></dd>
+                </div>
+                <div class="question__content__items q-line">
+                  <dt class="question__content__items-text q-ques">支払いはいつ？<span class="q-icon"></span></dt>
+                  <dd class="question__content__items-text q-ans">答えだよ<span class="q-icon-m"></span></dd>
+                </div>
+                <div class="question__content__items q-line">
+                  <dt class="question__content__items-text q-ques">実績は見せてもらえるのか？<span class="q-icon"></span></dt>
+                  <dd class="question__content__items-text q-ans">答えだよ<span class="q-icon-m"></span></dd>
+                </div>
+                <div class="question__content__items q-line">
+                  <dt class="question__content__items-text q-ques">対応地域は関西のみでしょうか？<span class="q-icon"></span></dt>
+                  <dd class="question__content__items-text q-ans">答えだよ<span class="q-icon-m"></span></dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact">
+        <div class="contact__container">
+          <div class="contact__content c-title">
+            <h2 class="content__title">CONTACT</h3>
+            <p class="content__title-sub">問い合わせはこちらより</p>
+          </div>
+          <form class="contact__form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSck9gjx_JkUu0kHCB7vbmPjr6UyOUlPYlvQ7f3QEFEpDXgHZw/formResponse">
+            <div class="contact__form__item">
+              <div class="contact__form__item-inner">
+                <input name="entry.479195684" class="contact__form__item-inner__column  c-common c-input" type="text" placeholder="会社名 *">
+              </div>
+            </div>
+            <div class="contact__form__item">
+              <div class="contact__form__item-column">
+                <input name="entry.804799826" class="contact__form__item-inner__column c-common c-input" type="text" placeholder="ご担当者名 *">
+              </div>
+            </div>
+            <div class="contact__form__item">
+              <div class="contact__form__item-column">
+                <input name="entry.2107509504" class="contact__form__item-inner__column c-common  c-input" type="text" placeholder="役職 *">
+              </div>
+            </div>
+            <div class="contact__form__item">
+              <div class="contact__form__item-column">
+                <input name="entry.250855281" class="contact__form__item-inner__column c-common c-input" type="text" placeholder="メールアドレス *">
+              </div>
+            </div>
+            <div class="contact__form__item">
+              <div class="contact__form__item-column">
+                <input name="entry.897858730" class="contact__form__item-inner__column c-common c-input" type="text" placeholder="電話番号">
+              </div>
+            </div>
+            <div class="contact__form__item">
+              <div class="contact__form__item-column">
+                <textarea name="entry.395293244" class="contact__form__item-inner__column c-common c-textarea" name="example" placeholder="問い合わせ内容 *"></textarea>
+              </div>
+            </div>
+            <div class="contact__form__item">
+              <button name="button" class="contact__form__item-button" type="submit" value="送信">送信</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="company">
+        <div class="company__container">
+          <div class="company__content ca-title">
+            <h2 class="content__title">COMPANY</h2>
+          </div>
+          <table class="company__table">
+            <tr class="company__table__row comp-common">
+              <th class="company__table__row-header">運営<br class="comp-br">会社</th>
+              <td class="company__table__row-data">洗濯theNIPPON</td>
+            </tr>
+            <tr class="company__table__row comp-common">
+              <th class="company__table__row-header">代表者<br class="comp-br">氏名</th>
+              <td class="company__table__row-data">坂本竜馬</td>
+            </tr>
+            <tr class="company__table__row comp-common">
+              <th class="company__table__row-header">住所</th>
+              <td class="company__table__row-data">長崎出島</td>
+            </tr>
+            <tr class="company__table__row comp-common">
+              <th class="company__table__row-header">資本金</th>
+              <td class="company__table__row-data">1,000,000円</td>
+            </tr>
+            <tr class="company__table__row comp-common content">
+              <th class="company__table__row-header" rowspan="3">事業<br class="comp-br">内容</th>
+              <td class="company__table__row-data">
+                <ul>
+                  <li>WEBコンサルティング業</li>
+                  <li>ITコンサルティング業</li>
+                  <li>採用コンサルティング業</li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="arrow" id="arrow"><span class="arrow__page-top">PAGETOP</span></div>
+      <div class="footer__content f-side">
+        <small class="copyright__pc fo-copy">©my portfolio</small>
+        <small class="copyright__sp fo-copy">©My portfolio</small>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+@forward "../config/variables";
+@use "../config/variables" as var;
+@forward  "../function/convert-vp";
+@use "../function/convert-vp" as vp;
+@forward "../mixin/bgi-line";
+@use "../mixin/bgi-line" as bl;
+@forward "../mixin/madia";
+@use "../mixin/madia";
+
+html {
+    font-size: 0.78125vw;
+    @include madia.deviceBreakPointMax(600px) {
+      font-size: 1.66667vw;
+    }
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  letter-spacing: .04em;
+  font-family: "游ゴシック体", sans-serif;
+  font-weight: bold;
+  color: var.$colorBaseBlack;
+  background-color: var.$colorLightBlue;
+  @include bl.bgi-line;
+  @include madia.deviceBreakPointMax(600px) {
+    @include bl.bgi-line-sp;
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+}

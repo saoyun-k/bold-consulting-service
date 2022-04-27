@@ -1,0 +1,91 @@
+@forward "../config/variables";
+@use "../config/variables" as var;
+@forward  "../function/convert-vp";
+@use "../function/convert-vp" as vp;
+@forward "../mixin/bgi-line";
+@use "../mixin/bgi-line" as bl;
+@forward "../mixin/madia";
+@use "../mixin/madia";
+@forward "../mixin/section-title";
+@use "../mixin/section-title" as st;
+@forward "../mixin/side-nav";
+@use "../mixin/side-nav" as sn;
+@forward  "../mixin/site-padding";
+@use "../mixin/site-padding" as sp;
+
+$bgi-numbers: 1, 2, 3, 4;
+
+.flow__content__items.f-title {
+  display: flex;
+  background-color: var.$colorBlue;
+  .flow__content__items-item.f-title {
+    @include st.content-title;
+    @include sp.sitePaddingBase(82px, 138px, 26px, 138px);
+    @include madia.deviceBreakPointMax(600px) {
+      @include sp.sitePaddingSp(170px, 238px, 58px, 38px);
+    }
+  }
+  .flow__content__items-item.f-box {
+    flex-grow: 1;
+    background-color: var.$colorWhite;
+    @include bl.bgi-line;
+    background-position-x: vp.convertVh(225.7px, 1280px);
+    @include madia.deviceBreakPointMax(600px) {
+      display: none;
+    }
+  }
+}
+.flow__content.f-side {
+  width: 100%;
+  height: vp.convertVh(268px, 1280px);
+  @include sn.side-nav;
+  background-color: var.$colorBlue;
+  @include madia.deviceBreakPointMax(600px) {
+    height: vp.convertVh(516px, 600px);
+  }
+  .side-navigation {
+    transform: translate(vp.convertVw(40px, 1280px), vp.convertVw(89px, 1280px)) rotate(-90deg);
+  }
+}
+
+@each $bgi-number in $bgi-numbers {
+
+  .flow__content__items.f-items {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-top: vp.convertVw(-200px, 1280px);
+    background-color: rgba(0, 0, 0, 0);
+    @include madia.deviceBreakPointMax(600px) {
+      margin-top: vp.convertVw(-516px, 600px);
+    }
+
+    .flow__content__items-item#{$bgi-number} {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: vp.convertVw(285.5px, 1280px);
+      height: vp.convertVh(350px, 1280px);
+      background-image: url(../images/flow#{$bgi-number}.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      @include madia.deviceBreakPointMax(600px) {
+        width: vp.convertPercent(281px, 600px);
+        height: vp.convertVh(344px, 600px);
+      }
+      .step {
+        font-size: 3.8rem;
+        @include madia.deviceBreakPointMax(600px) {
+          font-size: 3.4rem;
+        }
+        .step-font {
+          display: block;
+          margin-top: 1em;
+          font-size: 2.4rem;
+        }
+      }
+    }
+  }
+}

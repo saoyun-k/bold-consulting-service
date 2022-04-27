@@ -1,0 +1,17 @@
+@forward "../config/variables";
+@use "../config/variables" as var;
+@forward "../mixin/madia";
+@use "../mixin/madia";
+@forward  "../function/convert-vp";
+@use "../function/convert-vp" as vp;
+
+@mixin bgi-line {
+  background-image: linear-gradient(90deg, transparent vp.convertVw(334px, 1280px), rgba(112, 112, 112, .1) vp.convertVw(334px, 1280px));
+  background-position-x: center;
+  background-size: vp.convertVw(335px, 1280px);
+}
+
+@mixin bgi-line-sp {
+  background-image: linear-gradient(90deg, transparent vp.convertVw(174px, 600px), rgba(112, 112, 112, .1) vp.convertVw(32px, 600px));
+    background-size: vp.convertVw(175px, 600px) vp.convertVw(200px, 600px);
+}

@@ -1,0 +1,39 @@
+@forward "../config/variables";
+@use "../config/variables" as var;
+@forward  "../function/convert-vp";
+@use "../function/convert-vp" as vp;
+@forward "../mixin/bgi-line";
+@use "../mixin/bgi-line" as bl;
+@forward "../mixin/madia";
+@use "../mixin/madia";
+@forward  "../mixin/site-padding";
+@use "../mixin/site-padding" as sp;
+
+.header-wrapper {
+  position: relative;
+  z-index: 1;
+  height: vp.convertVw(660px, 1280px);
+  background-color: var.$colorWhite;
+  @include bl.bgi-line;
+  @include madia.deviceBreakPointMax(600px) {
+    height: vp.convertVw(651px, 600px);
+    @include bl.bgi-line-sp;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: vp.convertVw(49px, 1280px);
+  letter-spacing: .04em;
+  font-size: 3.2rem;
+  font-family: "Montserrat";
+  color: var.$colorBlack;
+  background-color: var.$colorWhite;
+  @include bl.bgi-line;
+  @include madia.deviceBreakPointMax(600px) {
+    font-size: 2.2rem;
+    @include bl.bgi-line-sp;
+  }
+}
